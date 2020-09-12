@@ -1,3 +1,9 @@
+# Build output
+lib
+
+# IntelliJ
+.idea
+
 # Logs
 logs
 *.log
