@@ -11,6 +11,7 @@ import * as gr from 'react-icons/gr';
 import * as hi from 'react-icons/hi';
 import * as im from 'react-icons/im';
 import * as io from 'react-icons/io';
+import * as io5 from 'react-icons/io5';
 import * as md from 'react-icons/md';
 import * as ri from 'react-icons/ri';
 import * as si from 'react-icons/si';
@@ -33,6 +34,7 @@ export default {
   hi,
   im,
   io,
+  io5,
   md,
   ri,
   si,

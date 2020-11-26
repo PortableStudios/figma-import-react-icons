@@ -13,7 +13,7 @@ export default [
   },
   {
     id: 'di',
-    name: 'DevIcons',
+    name: 'Devicons',
   },
   {
     id: 'fi',
@@ -49,7 +49,11 @@ export default [
   },
   {
     id: 'io',
-    name: 'Ionicons',
+    name: 'Ionicons 4',
+  },
+  {
+    id: 'io5',
+    name: 'Ionicons 5',
   },
   {
     id: 'md',
