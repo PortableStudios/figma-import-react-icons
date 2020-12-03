@@ -8,6 +8,8 @@ const maxHeight = 420;
 const defaultWidth = 420;
 figma.showUI(__html__, { width: defaultWidth, height: 0 });
 
+declare let REACT_ICONS_VERSION: string;
+
 // Handle messages from the UI
 figma.ui.onmessage = async (msg) => {
   switch (msg.type) {
@@ -31,7 +33,7 @@ figma.ui.onmessage = async (msg) => {
 
       // Create a frame for the icons
       const frame = figma.createFrame();
-      frame.name = name;
+      frame.name = `${name} (imported from react-icons v${REACT_ICONS_VERSION})`;
       frame.layoutMode = 'VERTICAL';
       frame.counterAxisSizingMode = 'AUTO';
       frame.horizontalPadding = framePadding;
