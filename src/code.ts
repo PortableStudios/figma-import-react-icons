@@ -57,7 +57,10 @@ figma.ui.onmessage = async (msg) => {
       iconKeys.forEach((iconName, i) => {
         // Render the React component to an SVG string
         const iconComponent = icons[iconName as keyof typeof icons];
-        const svgString = renderToStaticMarkup(createElement(iconComponent));
+        let svgString = renderToStaticMarkup(createElement(iconComponent));
+        // If the SVG uses "1em" for the height and width, replace it
+        // Figma will not import the icon correctly using "1em" instead of a size in pixels
+        svgString = svgString.replace(/1em/g, `${iconSize}px`);
         // Create a node from the SVG string, resize it
         const svgNode = figma.createNodeFromSvg(svgString);
         svgNode.resize(iconSize, iconSize);
