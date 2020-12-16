@@ -5,7 +5,6 @@ import * as di from 'react-icons/di';
 import * as fi from 'react-icons/fi';
 import * as fc from 'react-icons/fc';
 import * as fa from 'react-icons/fa';
-import * as gi from 'react-icons/gi';
 import * as go from 'react-icons/go';
 import * as gr from 'react-icons/gr';
 import * as hi from 'react-icons/hi';
@@ -28,7 +27,6 @@ export default {
   fi,
   fc,
   fa,
-  gi,
   go,
   gr,
   hi,

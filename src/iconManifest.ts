@@ -28,10 +28,6 @@ export default [
     name: 'Font Awesome',
   },
   {
-    id: 'gi',
-    name: 'Game Icons',
-  },
-  {
     id: 'go',
     name: 'Github Octicons',
   },
