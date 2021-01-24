@@ -37,7 +37,19 @@ you must wait for compilation to finish and then close and re-open the plugin.
 
 ## Publishing a new version
 
-Coming soon!
+To publish an update to the plugin you will need to login as the "Portable Account" account (check LastPass) and then:
+
+1. Build the new version of the plugin and test it
+
+2. Open the Figma desktop app
+
+3. Visit `Plugins > Manage Plugins...`
+
+4. Under `In development` press the options button next to `Import React-Icons` and select `Publish New Release...`
+
+5. (Optional) Add some information to the `"Version notes"` field
+
+6. Hit `"Publish"`
 
 ## TODO
 
