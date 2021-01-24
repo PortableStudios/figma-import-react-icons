@@ -3,6 +3,8 @@
 A plugin that allows you to import any icon set from [react-icons](https://react-icons.github.io/react-icons/) in to your
 Figma file, creating a component with an appropriate name for each icon.
 
+https://www.figma.com/community/plugin/921172243620367846/Import-React-Icons
+
 ## Development
 
 ### 1. Install the plugin locally
