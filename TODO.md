@@ -2,9 +2,9 @@
 
 ## Improve performance
 
-The plugin currently takes ~8 seconds to load in Figma, which is not ideal.
+The plugin currently takes ~5 seconds to load in Figma, which is not ideal.
 This is due to the combined size of all the icon sets being included,
-which add up to ~15.5mb at the time of writing. It's safe to assume
+which add up to ~10mb at the time of writing. It's safe to assume
 the long loading time is caused by the need for the browser to parse
 and execute this large amount of JavaScript.
 
@@ -41,10 +41,3 @@ If we can find a way to dynamically import `react-icons` at runtime it
 would also be nice for the designer to be able to choose the version
 of `react-icons` they want to import an icon set from, ensuring that
 the icons are the same as the ones available to the developer in code.
-
-## Publish it!
-
-Let's make it available to people!
-
-We need to decide whether the plugin should be private or public, and
-whether it should be published by an individual or the Portable team.
