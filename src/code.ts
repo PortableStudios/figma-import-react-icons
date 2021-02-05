@@ -80,7 +80,8 @@ figma.ui.onmessage = async (msg) => {
       figma.currentPage.appendChild(frame);
       figma.currentPage.selection = [frame];
       figma.viewport.scrollAndZoomIntoView([frame]);
-      figma.closePlugin();
+      // Let the the UI know we're done
+      figma.ui.postMessage({ type: 'done' });
       break;
     }
     default:

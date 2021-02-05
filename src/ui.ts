@@ -29,3 +29,16 @@ iconManifest.forEach((set) => {
 // Change the height of the UI to fit the buttons
 const container = getElement('js-container');
 postMessage({ type: 'change-height', height: container.clientHeight });
+
+// Listen for messages coming from the "back end"
+onmessage = (e) => {
+  const { type } = e.data.pluginMessage;
+  switch (type) {
+    case 'done':
+      // If the icons are finished importing, hide the loading indicator
+      getElement('js-loading-container').classList.remove('-visible');
+      break;
+    default:
+      break;
+  }
+};
