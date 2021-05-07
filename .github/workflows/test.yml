@@ -8,9 +8,9 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '14.x'
+
       - name: Install dependencies
         run: yarn install --frozen-lockfile
-      - name: Lint and typecheck the project
-        run: yarn verify
-      - name: Build the plugin
-        run: yarn build
+
+      - name: Lint, typecheck and build the project
+        run: yarn concurrently "yarn:lint" "yarn:typecheck" "yarn:build"
