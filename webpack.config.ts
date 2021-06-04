@@ -1,8 +1,9 @@
-const fs = require('fs');
-const path = require('path');
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+import * as fs from 'fs';
+import * as path from 'path';
+import * as webpack from 'webpack';
+import * as HtmlWebpackPlugin from 'html-webpack-plugin';
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
+import type { Configuration } from 'webpack';
 
 const reactIconsPackageJson = path.resolve(
   __dirname,
@@ -11,12 +12,14 @@ const reactIconsPackageJson = path.resolve(
 
 const getReactIconsVersion = () => {
   const file = fs.readFileSync(reactIconsPackageJson);
-  const json = JSON.parse(file);
+  const json = JSON.parse(file.toString());
   return json.version;
 };
 
-// Based on https://github.com/figma/plugin-samples/tree/master/webpack
-module.exports = (env, argv) => {
+const config = (
+  env: Record<string, unknown>,
+  argv: Record<string, unknown>
+): Configuration => {
   return {
     mode: argv.mode === 'production' ? 'production' : 'development',
     devtool: argv.mode === 'production' ? false : 'inline-source-map',
@@ -74,7 +77,7 @@ module.exports = (env, argv) => {
                 </div>
               </div>
               ${htmlWebpackPlugin.files.js.map(
-                (jsFile) =>
+                (jsFile: string) =>
                   `<script>${compilation.assets[
                     jsFile.substr(htmlWebpackPlugin.files.publicPath.length)
                   ].source()}</script>`
@@ -88,3 +91,5 @@ module.exports = (env, argv) => {
     stats: argv.watch ? 'errors-only' : 'normal',
   };
 };
+
+export default config;

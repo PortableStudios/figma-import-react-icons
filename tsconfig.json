@@ -6,6 +6,6 @@
     "skipLibCheck": true,
     "typeRoots": ["./node_modules/@types", "./node_modules/@figma"]
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "webpack.config.ts"],
   "exclude": ["node_modules"]
 }
