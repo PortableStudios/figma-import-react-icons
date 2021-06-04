@@ -10,15 +10,14 @@
   "main": "dist/code.js",
   "scripts": {
     "prepare": "husky install",
+    "pre-commit": "lint-staged",
+    "pre-push": "yarn typecheck",
     "build": "webpack --mode=production",
     "build:watch": "webpack --mode=production --watch",
     "build:analyze": "ANALYZE=true yarn build",
     "verify": "concurrently yarn:lint yarn:typecheck",
-    "lint": "eslint . --fix --ext .js,.ts,.tsx",
+    "lint": "eslint . --fix --ext .js,.jsx,.ts,.tsx",
     "typecheck": "tsc --noEmit"
-  },
-  "lint-staged": {
-    "*.{js,ts,tsx}": "eslint --fix"
   },
   "dependencies": {
     "react": "^17.0.2",
