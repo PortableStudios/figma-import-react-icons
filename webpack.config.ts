@@ -71,6 +71,41 @@ const config = (
                 <span class="header">
                   using <a href="https://react-icons.github.io/react-icons/" target="_blank">react-icons</a> v${getReactIconsVersion()}</span>
                 </span>
+                <span class="group-heading">
+                  CONFIGURATION
+                </span>
+                <div class="settings">
+                  <label class="settings__label">
+                    <input
+                      type="checkbox"
+                      name="outline-strokes"
+                      class="settings__checkbox"
+                      checked
+                    />
+                    <span class="settings__name">
+                      Outline strokes
+                    </span>
+                  </label>
+                  <p class="settings__description">
+                    Convert strokes into vector objects
+                    <button type="button" class="toggle-button" data-toggle="stroke-description">
+                      <sup>
+                        (Why?)
+                      </sup>
+                    </button>
+                  </p>
+                  <p class="settings__description -explanation -hidden" id="stroke-description">
+                    Converting strokes into vector objects ensures that resizing an icon with a stroke
+                    will also proportionally change the thickness of the stroke. This matches how icon
+                    sizing works for developers using the <a href="https://react-icons.github.io/react-icons/" target="_blank">react-icons</a>
+                    library. Untick this setting if you need to change the stroke width independent of the icon
+                    size, but keep in mind your Figma icons may not match the final product unless the developer
+                    makes specific code changes.
+                  </p>
+                </div>
+                <span class="group-heading">
+                  Icon Libraries
+                </span>
                 <div class="buttons js-buttons"></div>
                 <div class="loading-container js-loading-container">
                   <div class="loading-indicator"></div>

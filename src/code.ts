@@ -21,7 +21,7 @@ figma.ui.onmessage = async (msg) => {
     }
     // Import an icon set in to the current Figma page
     case 'import-icons': {
-      const { id, name } = msg;
+      const { id, name, shouldOutlineStrokes } = msg;
       const icons = iconComponents[id as keyof typeof iconComponents];
       const iconKeys = Object.keys(icons);
 
@@ -69,7 +69,14 @@ figma.ui.onmessage = async (msg) => {
         componentNode.resize(iconSize, iconSize);
         componentNode.name = `react-icons/${id}/${iconName}`;
         // Move the vectors from the frame node to the component node
-        svgNode.children.forEach((c) => componentNode.appendChild(c));
+        svgNode.children.forEach((c) => {
+          // Outline the vector stroke first if required
+          if (shouldOutlineStrokes && c.type === 'VECTOR') {
+            // eslint-disable-next-line no-param-reassign
+            c = c.outlineStroke() ?? c;
+          }
+          componentNode.appendChild(c);
+        });
         svgNode.remove();
         // Add the component node to the correct row
         const rowIndex = Math.floor(i / iconsPerRow);

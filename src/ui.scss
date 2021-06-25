@@ -6,13 +6,65 @@ body {
   display: flex;
   flex-direction: column;
   font-family: sans-serif;
-  padding: 16px;
+  font-size: 16px;
   position: relative;
   text-align: center;
 }
 
 .header {
-  font-size: 16px;
+  padding: 16px;
+}
+
+.group-heading {
+  border-top: 1px solid #666;
+  color: #666;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  padding: 16px;
+  padding-bottom: 0;
+  text-transform: uppercase;
+}
+
+.settings {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+
+  &__label {
+    text-align: left;
+  }
+
+  &__checkbox {
+    margin: 0;
+    margin-right: 4px;
+  }
+
+  &__name {
+    font-weight: 700;
+  }
+
+  &__description {
+    font-size: 15px;
+    margin: 0;
+    margin-top: 4px;
+    text-align: left;
+
+    &.-explanation {
+      font-size: 14px;
+    }
+
+    &.-hidden {
+      display: none;
+    }
+  }
+}
+
+.toggle-button {
+  background: none;
+  border: none;
+  padding: 0;
 }
 
 .buttons {
@@ -20,7 +72,7 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 16px;
+  padding: 16px;
 }
 
 .button {
