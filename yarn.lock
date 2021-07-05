@@ -65,10 +65,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@figma/plugin-typings@^1.25.0":
-  version "1.25.0"
-  resolved "https://registry.yarnpkg.com/@figma/plugin-typings/-/plugin-typings-1.25.0.tgz#38e0115982470ef684638285e64f9f893254e0c6"
-  integrity sha512-F27ssLo7a2Je2TXYP5ovKzAKHmelP+q3M+ylqwz/sh/k+fPCKc5izHfZczcn6/m588QUCT3NiJlPTFjgan0LeQ==
+"@figma/plugin-typings@^1.26.0":
+  version "1.26.0"
+  resolved "https://registry.yarnpkg.com/@figma/plugin-typings/-/plugin-typings-1.26.0.tgz#2a0ef53919ac226f0a7fe7dbbde404a2c8b797b5"
+  integrity sha512-afX0lhkV6EWQ4UGGIl+C/298KOZx/fRNCMx/DHEOYweM1gwonwizi0SuloT0C+A8mvbWeQ9eKqpJGD5ftIHeqw==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
