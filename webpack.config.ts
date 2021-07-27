@@ -121,7 +121,8 @@ const config = (
           </html>`,
       }),
       // Add bundle analyzer plugin if ANALYZE environment variable is true
-      ...(process.env.ANALYZE ? [new BundleAnalyzerPlugin()] : []),
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      ...(process.env.ANALYZE ? [new BundleAnalyzerPlugin() as any] : []),
     ],
     stats: argv.watch ? 'errors-only' : 'normal',
   };
