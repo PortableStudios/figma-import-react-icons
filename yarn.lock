@@ -77,10 +77,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@figma/plugin-typings@^1.36.0":
-  version "1.36.0"
-  resolved "https://registry.yarnpkg.com/@figma/plugin-typings/-/plugin-typings-1.36.0.tgz#c001ccf96d2cf6606deddd22e51336ae440404ae"
-  integrity sha512-ovtx6azyArlAN+y+a62yp+SWrQITcYNMLXcNzzygINGO5vAO8h1mM+8brDgXnKds8QyPgDgC9jgydZrM5dzGBw==
+"@figma/plugin-typings@^1.38.0":
+  version "1.38.0"
+  resolved "https://registry.yarnpkg.com/@figma/plugin-typings/-/plugin-typings-1.38.0.tgz#dd7678e83385fe2c1dbcc910f5a2412611ffad53"
+  integrity sha512-aFKF+GuN/8AGuboDdKQO+mbCJlQhoS7qNMx8dnqfwa5+fxur9lCh/Dclxrxp+LuSKG854ryXmP7bhZbqO2QapA==
 
 "@humanwhocodes/config-array@^0.5.0":
   version "0.5.0"
