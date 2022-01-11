@@ -17,4 +17,4 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: Lint and build the project
-        run: yarn concurrently "yarn:lint" "yarn:build"
+        run: yarn concurrently --group "yarn:lint" "yarn:build"
