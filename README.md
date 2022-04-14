@@ -13,11 +13,9 @@ https://www.figma.com/community/plugin/921172243620367846/Import-React-Icons
 
 2. Open the Figma desktop app
 
-3. Visit `Plugins > Development > New Plugin...`
+3. Visit `Plugins > Development > Import plugin from manifest...`
 
-4. Choose the `Click to choose a manifest.json file` option
-
-5. Find and open the `manifest.json` file in the repository
+4. Find and open the `manifest.json` file in the repository
 
 ### 2. Build the plugin (in watch mode)
 
