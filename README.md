@@ -22,6 +22,7 @@ https://www.figma.com/community/plugin/921172243620367846/Import-React-Icons
 Install the dependencies and start the build in watch mode:
 
 ```bash
+nvm install
 yarn install
 yarn build:watch
 ```
