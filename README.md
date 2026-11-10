@@ -23,8 +23,9 @@ Install the dependencies and start the build in watch mode:
 
 ```bash
 nvm install
-yarn install
-yarn build:watch
+corepack enable # provides the pnpm version pinned in package.json
+pnpm install
+pnpm run build:watch
 ```
 
 This will build the plugin and then re-build it whenever a file is modified.

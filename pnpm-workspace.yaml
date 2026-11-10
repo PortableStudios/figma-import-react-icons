@@ -1,0 +1,4 @@
+minimumReleaseAge: 10080 # refuse to install any dependencies less than 7 days old
+
+allowBuilds:
+  '@parcel/watcher': false # ships prebuilt platform binaries; build-from-source script not needed
